@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "AutoSearch For Rewards",
+    "version": "1.0",
+    "description": "Searches 100 times for 100 Points in Microsoft Rewards.",
+    "permissions": ["activeTab", "tabs"],
+    "host_permissions": ["https://*.bing.com/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+        "matches": ["https://*.bing.com/*"],
+        "js": ["content.js"]
+        }
+    ],
+    "action": {
+  "default_popup": "popup.html"
+  
+}
+}
